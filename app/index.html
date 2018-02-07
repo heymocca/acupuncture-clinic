@@ -11,8 +11,7 @@
 <body>
     <!-- header navigation -->
     <header>
-        <img src="assets/images/icons/clear-view-escapes.svg">
-        <a href="#">Make An Oppointment</a>
+        <a href="#" class="btn">Make An Oppointment</a>
         <nav>
             <ul>
                 <li><a href="">About Clinic</a></li>
@@ -24,13 +23,18 @@
 
     <!-- hero image block -->
     <div class="hero-image">
-        <img src="assets/images/hero-large.jpg" alt="hero-image">
+        <picture>
+            <source srcset="assets/images/hero-large.jpg 1920w" media="(min-width: 1380px)"/>
+            <source srcset="assets/images/hero-medium.jpg 1380w" media="(min-width: 990px)"/>
+            <source srcset="assets/images/hero-small.jpg 990w" media="(min-width: 640px)"/>
+            <img class="hero-image__image"src="assets/images/hero-smaller.jpg" alt="hero-image">
+        </picture>
         <div class="hero-image__text-content">
             <h1 class="hero-image__title">Keep Healthy</h1>
             <h2 class="hero-image__subtitle">From now on</h2>
-            <p class="hero-image__description">We provide you troditional and professional
+            <p class="hero-image__description">We provide you traditional and professional
                 Chinese medicine treatment</p>
-            <p><a href="#">Get Started Today</a></p>
+            <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
         </div>
     </div>
 
@@ -58,23 +62,25 @@
 
         <!-- features -->
         <div class="features">
-            <img src="assets/images/icons/star.svg" alt="">
+            <img class="section-title__icon" src="assets/images/icons/service.png" />
+            Our <strong>Features</strong>
+            <img src="assets/images/icons/herb.png" alt="">
             <p>Herb</p>
             <p>what is herb</p>
-            <img src="assets/images/icons/star.svg" alt="">
-            <p>Moxia</p>
+            <img src="assets/images/icons/moxa.png" alt="">
+            <p>Moxibustion</p>
             <p>what is Moxia</p>
-            <img src="assets/images/icons/star.svg" alt="">
+            <img src="assets/images/icons/acupuncture.png" alt="">
             <p>Acupuncture</p>
             <p>what is Acupuncture</p>
-            <img src="assets/images/icons/star.svg" alt="">
+            <img src="assets/images/icons/tuina.png" alt="">
             <p>Tuina</p>
             <p>what is Tuina</p>
         </div>
 
         <!-- testimonial -->
         <div class="testimonial">
-            <img src="assets/images/icons/comment.svg" alt="comment">
+            <img src="assets/images/icons/comment.png" alt="comment">
             <p>Real Testimonials</p>
             <img src="assets/images/testimonial.jpg" alt="">
             <p>User 1</p>
@@ -82,7 +88,7 @@
             <p>comments comments comments comments comments comments comments
              comments comments comments comments comments comments comments</p>
 
-             <img src="assets/images/icons/comment.svg" alt="comment">
+             <img src="assets/images/icons/comment.png" alt="comment">
              <p>Real Testimonials</p>
              <img src="assets/images/testimonial.jpg" alt="">
              <p>User 2</p>
@@ -90,7 +96,7 @@
              <p>comments comments comments comments comments comments comments
               comments comments comments comments comments comments comments</p>
 
-              <img src="assets/images/icons/comment.svg" alt="comment">
+              <img src="assets/images/icons/comment.png" alt="comment">
               <p>Real Testimonials</p>
               <img src="assets/images/testimonial.jpg" alt="">
               <p>User 3</p>
@@ -102,7 +108,7 @@
         <!-- footer -->
         <footer>
             @Copyright 2018 Acupuncture Clinic. All rights reserved
-            <a href="#">Make an appointment</a>
+            <a href="#" class="btn">Make an appointment</a>
         </footer>
 
     </div>
