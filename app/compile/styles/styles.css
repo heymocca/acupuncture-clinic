@@ -508,9 +508,10 @@ img {
 
 .hero-image__description {
         font-weight: 100;
+        font-size: 1.2rem;
         color: #8b8378;
         text-shadow: 2px 2px blur rgba(0, 0, 0, 1);
-        max-width: 20rem;
+        max-width: 30rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -543,3 +544,9 @@ img {
             font-size: 1.6rem
     }
     }
+
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
