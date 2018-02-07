@@ -1,6 +1,6 @@
-.clinic-intro {
+.clinic-intro{
     font-weight: 300;
-    /* font-size: 2.75rem; */
+    font-size: 1.9rem;
     color: $mainTitle;
 
     @mixin atSmall {
@@ -41,5 +41,9 @@
         @mixin atSmall {
             margin-bottom: 3.125rem;
         }
+    }
+
+    &__no-t-margin {
+        margin-top: 0;
     }
 }

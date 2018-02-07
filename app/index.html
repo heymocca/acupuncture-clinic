@@ -42,25 +42,38 @@
     </div>
 
     <!-- clinic intro -->
-    <div class="clinic-intro page-section">
+    <div class="page-section">
         <div class="wrapper">
             <h1 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--b-margin-small">Your first <strong>customized treatment plan</strong> </h1>
             <h2 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--orange clinic-intro--small clinic-intro--narrow clinic-intro--b-margin-large">We&rsquo;ve been working to make your body <strong>better</strong>.</h2>
-        <div class="wrapper wrapper--medium wrapper--b-margin">
-            <img sizes="(min-width:900px) 976w, 100vw" srcset="assets/images/clinic-intro-small.jpg 565w,
+            <div class="wrapper wrapper--medium wrapper--b-margin">
+                <img sizes="(min-width:900px) 976w, 100vw" srcset="assets/images/clinic-intro-small.jpg 565w,
             assets/images/clinic-intro-large.jpg" alt="clinic-intro">
-        </div>
-
+            <!-- (min-width:900px) 976w, 100vw: if the lager than 900, display in 976 wide, otherwise display 100%. "vw" is viewport -->
+            </div>
 
             <!-- facilities -->
-            <div class="facilities">
-                <img src="assets/images/facilities-large.jpg" alt="facilities">
-                <p>Here's where we work</p>
-                <p>facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities
-                    info</p>
-                <p>Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test
-                    body</p>
-                <p>Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options</p>
+            <div class=" row row--gutters">
+                <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+                    <picture>
+                        <source size="404" srcset="assets/images/facilities-large.jpg 404w" media="(min-width: 1000px)"/>
+                        <source size="320" srcset="assets/images/facilities-medium.jpg " media="(min-width: 800px)"/>
+                        <img srcset="assets/images/facilities-small.jpg 800w" alt="facilities" />
+                    </picture>
+                    </div>
+
+                <div id="facilities" class="row__medium-8 row__medium-8--smaller">
+                    <div class="generic-content-container">
+                        <h2 class="clinic-intro__no-t-margin">Here's where we work</h2>
+                        <p>facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities info facilities
+                            info
+                        </p>
+                        <p>Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body Test body
+                            Test body
+                        </p>
+                        <p>Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options Treatment options</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

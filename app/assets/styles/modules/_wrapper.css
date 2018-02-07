@@ -2,7 +2,7 @@
     padding-left: 10px;
     padding-right: 10px;
     overflow: hidden;
-    max-width: 1200px;
+    max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
 
@@ -18,7 +18,7 @@
     &--b-margin {
             margin-bottom: 1.2rem;
         @mixin atSmall {
-            margin-bottom: 3.94rem;
+            margin-bottom: 3rem;
         }
 
     }
