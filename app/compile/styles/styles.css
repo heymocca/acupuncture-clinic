@@ -586,20 +586,23 @@ img {
 
 .page-section {
     padding: 2.5rem 0;
-
 }
 
 @media (min-width: 530px) {
 
 .page-section {
         padding: 3.5rem 0
-
 }
     }
 
 .page-section--blue {
         background-color: #3b9ad7;
         color: #fff;
+    }
+
+.page-section--testimonials {
+        background: url("/assets/images/testimonial-bg.jpg") top center no-repeat;
+        background-size: cover;
     }
 
 .clinic-intro{
@@ -751,7 +754,6 @@ img {
         margin-left: auto;
         margin-right: auto;
 
-
     }
 
 @media (min-width: 530px) {
@@ -764,8 +766,17 @@ img {
             margin-bottom: 0;
             display: inline-block
 
-
     }
+    }
+
+.section-title__icon--right {
+        margin-left: 1.5rem;
+        position: relative;
+        top: 8px;
+    }
+
+.section-title--blue {
+        color: #0074D9;
     }
 
 strong {
