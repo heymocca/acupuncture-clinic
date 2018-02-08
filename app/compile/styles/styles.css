@@ -467,7 +467,7 @@ img {
 
 .hero-image {
     position: relative;
-    border-bottom: 10px solid #8d7d6b;
+    border-bottom: 10px solid #0074D9;
 }
 
 .hero-image__text-content {
@@ -482,11 +482,13 @@ img {
 
 .hero-image__image {
         display: block;
+        opacity: 0.9;
+        filter: alpha(opacity=50);
     }
 
 .hero-image__title {
         font-weight: 300;
-        color: #8d7d6b;
+        color: #0074D9;
         margin: 0 0 10px 0;
         font-size: 2.4rem;
     }
@@ -500,7 +502,7 @@ img {
 
 .hero-image__subtitle {
         font-weight: 300;
-        color: #8d7d6b;
+        color: #0074D9;
         margin: 0;
     }
 
@@ -514,24 +516,25 @@ img {
 .hero-image__description {
         font-weight: 100;
         font-size: 1.2rem;
-        color: #8b8378;
+        color: #fff;
         text-shadow: 2px 2px blur rgba(0, 0, 0, 1);
         max-width: 30rem;
         margin-left: auto;
         margin-right: auto;
     }
 
-@media (min-width: 530px) {
+@media (min-width: 800px) {
 
 .hero-image__description {
+            font-weight: 500;
             font-size: 1.875rem;
             max-width: 40rem
     }
     }
 
 .btn {
-    background-color: #8d7d6b;
-    color: #eedfcc;
+    background-color: #0074D9;
+    color: #fff;
     text-decoration: none;
     padding: .75rem 1.2rem;
     display: inline-block;
@@ -540,7 +543,7 @@ img {
 
 .btn--orange {
         background-color: #ff8000;
-        color: #fff;
+        color: #white;
     }
 
 @media (min-width: 530px) {
@@ -592,7 +595,7 @@ img {
 .clinic-intro{
     font-weight: 300;
     font-size: 1.9rem;
-    color: #8d7d6b;
+    color: #0074D9;
 }
 
 @media (min-width: 530px) {
@@ -692,11 +695,12 @@ img {
         font-weight: 300;
         line-height: 1.65;
         margin: 0 0 1.8rem 0;
+        text-align: justify;
     }
 
 @media (min-width: 530px) {
 
 .generic-content-container p {
-            font-size: 1.125rem
+            font-size: 1rem
     }
     }
