@@ -12,24 +12,38 @@
 
 <body>
     <!-- header navigation -->
-    <header>
-        <a href="#" class="btn">Make An Oppointment</a>
-        <nav>
-            <ul>
-                <li><a href="">About Clinic</a></li>
-                <li><a href="">Our Services</a></li>
-                <li><a href="">Testimonial</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="site-header">
+        <div class="wrapper">
+            <div class="site-header__logo">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <div class="site-header__menu-icon">
+                <div class="site-header__menu-icon--toggle"></div>
+                <div class="site-header__menu-icon--toggle"></div>
+                <div class="site-header__menu-icon--toggle"></div>
+            </div>
+            <div class="site-header__menu-content">
+                <div class="site-header__btn-container">
+                    <a href="#" class="btn">Make an oppointment</a>
+                </div>
+                <nav class="generic-nav generic-nav--right">
+                    <ul>
+                        <li><a href="#">ABOUT CLINIC</a></li>
+                        <li><a href="#">OUR SERVICES</a></li>
+                        <li><a href="#">FEEDBACK</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
+    </header>
     <!-- hero image block -->
     <div class="hero-image">
         <picture>
             <source size="1920" srcset="assets/images/hero-large.jpg 1920w" media="(min-width: 1380px)" />
             <source size="1380" srcset="assets/images/hero-medium.jpg 1380w" media="(min-width: 990px)" />
-            <source size="990" srcset="assets/images/hero-small.jpg 990w" media="(min-width: 600px)" />
-            <img class="hero-image__image" src="assets/images/hero-smaller.jpg" alt="hero-image">
+            <source size="990" srcset="assets/images/hero-small.jpg 990w" media="(min-width: 640px)" />
+            <img class="hero-image__image" srcset="assets/images/hero-smaller.jpg 640w" alt="hero-image">
         </picture>
         <div class="hero-image__text-content">
             <div class="wrapper">
@@ -40,7 +54,6 @@
             </div>
         </div>
     </div>
-
     <!-- clinic intro -->
     <div class="page-section">
         <div class="wrapper">
@@ -120,7 +133,6 @@
         </div>
 
     </div>
-
     <!-- testimonial -->
     <div class="page-section page-section--testimonials page-section--no-b-padding-until-medium">
         <div class="wrapper wrapper--no-padding-until-medium">
@@ -167,7 +179,6 @@
 
         </div>
         </div>
-
     <!-- footer -->
     <footer class="site-footer">
         <div class="wrapper">

@@ -11,3 +11,18 @@ img {
 * {
     box-sizing: border-box;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+    @mixin clearfix;
+}
+
+li {
+    float: left;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

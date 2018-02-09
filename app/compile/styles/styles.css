@@ -465,12 +465,33 @@ img {
             box-sizing: border-box;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+li {
+    float: left;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .hero-image {
     position: relative;
     border-bottom: 10px solid #0074D9;
 }
 
 .hero-image__text-content {
+        padding-top: 50px;
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -478,6 +499,13 @@ img {
         left: 0;
         width: 100%;
         text-align: center;
+    }
+
+@media (min-width: 800px) {
+
+.hero-image__text-content {
+            padding-top: 70px
+    }
     }
 
 .hero-image__image {
@@ -493,7 +521,7 @@ img {
         font-size: 2.8rem;
     }
 
-@media (min-width: 530px) {
+@media (min-width: 800px) {
 
 .hero-image__title {
             font-size: 5.6rem
@@ -506,7 +534,7 @@ img {
         margin: 0;
     }
 
-@media (min-width: 530px) {
+@media (min-width: 800px) {
 
 .hero-image__subtitle {
             font-size: 2.875rem
@@ -951,4 +979,94 @@ strong {
 
 
     }
+    }
+
+.site-header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+
+
+
+}
+
+@media (min-width: 800px) {
+
+.site-header {
+        background-color: rgba(59,154,215, .5)
+
+
+
+}
+    }
+
+.site-header__btn-container {
+        float: right;
+    }
+
+.site-header__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+            position: absolute;
+            top: 0;
+            left: auto;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0)
+    }
+    }
+
+.site-header__menu-content {
+        display: none;
+    }
+
+@media (min-width: 800px) {
+
+.site-header__menu-content {
+            display: block
+    }
+    }
+
+.site-header__menu-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon {
+            display: none
+    }
+    }
+
+.site-header__menu-icon--toggle {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        background-color: #fff;
+    }
+
+.generic-nav--right {
+        float: right;
+    }
+
+.generic-nav li {
+        padding-right: 20px;
+    }
+
+.generic-nav a {
+        display: block;
+        color: #fff;
+        font-weight: 400;
+        padding: 12px 0;
+
     }
