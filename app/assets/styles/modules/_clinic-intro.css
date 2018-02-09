@@ -1,6 +1,6 @@
 .clinic-intro{
     font-weight: 300;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     color: $mainTitle;
 
     @mixin atSmall {
@@ -24,7 +24,7 @@
     }
 
     &--small {
-        font-size: 1.3rem;
+        font-size: 1.125rem;
         @mixin atSmall {
             font-size: 2rem;
         }

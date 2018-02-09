@@ -5,12 +5,12 @@
     }
 
     &--blue {
-        background-color: #3b9ad7;
+        background-color: $backgroundColor2;
         color: $white;
     }
 
     &--testimonials {
-        background-color: #B6DBFF;
+        background-color: $backgroundColor3;
 
         @mixin atMedium {
             background: url("/assets/images/testimonial-bg.jpg") top center no-repeat;
