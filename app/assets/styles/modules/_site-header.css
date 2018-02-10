@@ -3,21 +3,28 @@
     z-index: 2;
     width: 100%;
     padding: 10px;
-
+    /*transition property: when this element's background color
+    changes, it will gradually transition to the new value over
+    a certain period of the time, by default the transition is
+    linear, here I change it to ease-out */
+    transition: background-color .3s ease-out;
+    /*--is-expanded is to control mobile toggle menu */
+    &--is-expanded {
+        background-color: rgba($backgroundColor2, .55);
+    }
     @mixin atMedium {
         background-color: rgba($backgroundColor2, .5);
     }
-
     &__btn-container {
-        float: right;
+        @mixin atMedium {
+            float: right;
+        }
     }
-
     &__logo {
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-
         @mixin atMedium {
             position: absolute;
             top: 0;
@@ -25,32 +32,94 @@
             transform: translateX(0);
         }
     }
-
     &__menu-content {
-        display: none;
-
+        /*by default I use display none, but I want menu content fade in as well
+        so I use opacity is zero instead of display none. This way the content
+        will still be hidden initially, but once the visible modifier class is
+        add, I can gradually fade to an opacity of 1 which is fully visible.  */
+        /* display: none; */
+        opacity: 0;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+        /*even though the content will be invisible initially, it will still
+        exist in the browser and it can be clicked on. Therefore, use z-index
+        and provide a negative value to ensure that this menu content when it's
+        hidden sits beneath all the other content on the page, so that it can't
+        be accidentally clicked on. When you use z-index, you also need to use
+        position: relative, otherwise, the browser won't ackonwledge z-index value.*/
+        position: relative;
+        z-index: -10;
+        padding-top: 100px;
+        text-align: center;
         @mixin atMedium {
-            display: block;
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            transform: scale(1);
+        }
+        /*--is-visible is to display header navigation content */
+        &--is-visible {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
         }
     }
-
     &__menu-icon {
+        width: 20px;
+        height: 20px;
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 10;
 
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: $white;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+        &--middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: $white;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 16px;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: $white;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
         @mixin atMedium {
             display: none;
         }
     }
+    &__menu-icon--close {
+        &::before {
+            transform: rotate(45deg) scale(1.2);
+        }
 
-    &__menu-icon--toggle {
-        width: 35px;
-        height: 5px;
-        margin: 6px 0;
-        background-color: $white;
+        .site-header__menu-icon--middle {
+            opacity: 0;
+            transition: scaleX(0);
+        }
+
+        &::after {
+            transform: rotate(-45deg) scale(1.2) translateX(-0.3px) translateY(.3px);
+        }
     }
-
-
-
 }

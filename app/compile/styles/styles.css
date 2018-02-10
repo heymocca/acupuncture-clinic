@@ -477,7 +477,6 @@ ul::after {
     }
 
 li {
-    float: left;
     list-style: none;
 }
 
@@ -986,23 +985,32 @@ strong {
     z-index: 2;
     width: 100%;
     padding: 10px;
-
-
-
+    /*transition property: when this element's background color
+    changes, it will gradually transition to the new value over
+    a certain period of the time, by default the transition is
+    linear, here I change it to ease-out */
+    -webkit-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
 }
+
+/*--is-expanded is to control mobile toggle menu */
+
+.site-header--is-expanded {
+        background-color: rgba(59,154,215, .55);
+    }
 
 @media (min-width: 800px) {
 
 .site-header {
         background-color: rgba(59,154,215, .5)
-
-
-
 }
     }
 
+@media (min-width: 800px) {
+
 .site-header__btn-container {
-        float: right;
+            float: right
+    }
     }
 
 .site-header__logo {
@@ -1025,21 +1033,101 @@ strong {
     }
 
 .site-header__menu-content {
-        display: none;
+        /*by default I use display none, but I want menu content fade in as well
+        so I use opacity is zero instead of display none. This way the content
+        will still be hidden initially, but once the visible modifier class is
+        add, I can gradually fade to an opacity of 1 which is fully visible.  */
+        /* display: none; */
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        /*even though the content will be invisible initially, it will still
+        exist in the browser and it can be clicked on. Therefore, use z-index
+        and provide a negative value to ensure that this menu content when it's
+        hidden sits beneath all the other content on the page, so that it can't
+        be accidentally clicked on. When you use z-index, you also need to use
+        position: relative, otherwise, the browser won't ackonwledge z-index value.*/
+        position: relative;
+        z-index: -10;
+        padding-top: 100px;
+        text-align: center;
     }
 
 @media (min-width: 800px) {
 
 .site-header__menu-content {
-            display: block
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            -webkit-transform: scale(1);
+                    transform: scale(1)
     }
     }
 
+/*--is-visible is to display header navigation content */
+
+.site-header__menu-content--is-visible {
+            opacity: 1;
+            z-index: 1;
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+        }
+
 .site-header__menu-icon {
+        width: 20px;
+        height: 20px;
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 10;
     }
+
+.site-header__menu-icon::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: #fff;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        }
+
+.site-header__menu-icon--middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: #fff;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            -webkit-transform-origin: 0 50%;
+                    transform-origin: 0 50%;
+        }
+
+.site-header__menu-icon::after {
+            content: "";
+            position: absolute;
+            top: 16px;
+            left: 0;
+            height: 3px;
+            width: 20px;
+            background-color: #fff;
+            -webkit-transform-origin: 0 100%;
+                    transform-origin: 0 100%;
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+        }
 
 @media (min-width: 800px) {
 
@@ -1048,25 +1136,79 @@ strong {
     }
     }
 
-.site-header__menu-icon--toggle {
-        width: 35px;
-        height: 5px;
-        margin: 6px 0;
-        background-color: #fff;
+.site-header__menu-icon--close::before {
+            -webkit-transform: rotate(45deg) scale(1.2);
+                    transform: rotate(45deg) scale(1.2);
+        }
+
+.site-header__menu-icon--close .site-header__menu-icon--middle {
+            opacity: 0;
+            -webkit-transition: scaleX(0);
+            transition: scaleX(0);
+        }
+
+.site-header__menu-icon--close::after {
+            -webkit-transform: rotate(-45deg) scale(1.2) translateX(-0.3px) translateY(.3px);
+                    transform: rotate(-45deg) scale(1.2) translateX(-0.3px) translateY(.3px);
+        }
+
+.generic-nav {
+    padding-top: 10px;
+}
+
+@media (min-width: 800px) {
+
+.generic-nav {
+        padding-top: 0
+}
     }
 
+@media (min-width: 800px) {
+
 .generic-nav--right {
-        float: right;
+            float: right
+    }
     }
 
 .generic-nav li {
-        padding-right: 20px;
+        padding-right: 7px;
+        display: inline-block;
+    }
+
+@media (min-width: 800px) {
+
+.generic-nav li {
+            padding-right: 20px;
+            float: left;
+            display: block
+    }
+    }
+
+.generic-nav li:last-child {
+        padding-right: 0;
+    }
+
+@media (min-width: 800px) {
+
+.generic-nav li:last-child {
+            padding-right: 20px
+    }
     }
 
 .generic-nav a {
         display: block;
         color: #fff;
         font-weight: 400;
-        padding: 12px 0;
+        padding: 5px 8px;
+        font-size: .8rem;
+        background-color: rgba(59,154,215, .5);
+    }
 
+@media (min-width: 800px) {
+
+.generic-nav a {
+            padding: 12px 0;
+            font-size: 1rem;
+            background-color:transparent
+    }
     }
