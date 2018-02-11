@@ -1002,8 +1002,13 @@ strong {
 @media (min-width: 800px) {
 
 .site-header {
+        position: fixed;
         background-color: rgba(59,154,215, .5)
 }
+
+        .site-header--dark {
+            background-color: rgba(0,116,217, 1);
+        }
     }
 
 @media (min-width: 800px) {
@@ -1019,6 +1024,10 @@ strong {
         left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
+        -webkit-transition: -webkit-transform .4s ease-out;
+        transition: -webkit-transform .4s ease-out;
+        transition: transform .4s ease-out;
+        transition: transform .4s ease-out, -webkit-transform .4s ease-out;
     }
 
 @media (min-width: 800px) {
@@ -1029,7 +1038,14 @@ strong {
             left: auto;
             -webkit-transform: translateX(0);
                     transform: translateX(0)
+            /* only when page scroll down and site nav color is changed,
+            the logo will be shrinked as well */
     }
+            .site-header--dark .site-header__logo {
+                top: -20px;
+                -webkit-transform: scale(.6);
+                        transform: scale(.6);
+            }
     }
 
 .site-header__menu-content {

@@ -13,7 +13,12 @@
         background-color: rgba($backgroundColor2, .55);
     }
     @mixin atMedium {
+        position: fixed;
         background-color: rgba($backgroundColor2, .5);
+
+        &--dark {
+            background-color: rgba($mainTitle, 1);
+        }
     }
     &__btn-container {
         @mixin atMedium {
@@ -25,11 +30,18 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        transition: transform .4s ease-out;
         @mixin atMedium {
             position: absolute;
             top: 0;
             left: auto;
             transform: translateX(0);
+            /* only when page scroll down and site nav color is changed,
+            the logo will be shrinked as well */
+            .site-header--dark & {
+                top: -20px;
+                transform: scale(.6);
+            }
         }
     }
     &__menu-content {
