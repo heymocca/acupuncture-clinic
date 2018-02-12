@@ -594,6 +594,10 @@ a {
         max-width: 976px;
     }
 
+.wrapper--narrow {
+        max-width: 850px;
+    }
+
 .wrapper .wrapper {
         padding-left: 0;
         padding-right: 0;
@@ -842,7 +846,7 @@ a {
 .section-title__icon--right {
         margin-left: 1.5rem;
         position: relative;
-        top: 8px;
+        top: 13px;
     }
 
 .section-title--blue {
@@ -1253,3 +1257,105 @@ strong {
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.modal__is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+.modal__category {
+        background-color: rgba(182,219,255, .3);
+        border-radius: 4px;
+    }
+
+.modal__category--no-bg {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+.modal__category-title {
+        font-size: 1rem;
+        color: #0074D9;
+    }
+
+.modal__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size:2rem;
+        color: #B6DBFF;
+        -webkit-transform: scaleX(1.4);
+                transform: scaleX(1.4);
+        -webkit-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+    }
+
+.modal__close:hover {
+            color: #3b9ad7;
+            cursor: pointer;
+        }
+
+/*keep btn and its animation for later use  */
+
+.modal__btn {
+        float: right;
+        margin-bottom: .75rem;
+    }
+
+.modal__btn--animated {
+        display: block;
+        border-radius: 4px;
+        background-color: #B6DBFF;
+        border: none;
+        color: #fff;
+        width: 180px;
+        text-align: center;
+        font-size: 1.15rem;
+        padding: .5rem .8rem;
+        cursor: pointer;
+
+    }
+
+.modal__btn--animated span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+
+.modal__btn--animated span:after {
+            content: "\00bb";
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+.modal__btn--animated:hover span {
+            padding-right: 20px;
+        }
+
+.modal__btn--animated:hover span:after{
+            opacity: 1;
+            right:0;
+        }

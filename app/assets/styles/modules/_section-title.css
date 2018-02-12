@@ -26,8 +26,9 @@
     &__icon--right {
         margin-left: 1.5rem;
         position: relative;
-        top: 8px;
+        top: 13px;
     }
+
 
     &--blue {
         color: $mainTitle;

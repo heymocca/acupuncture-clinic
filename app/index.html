@@ -22,7 +22,7 @@
             </div>
             <div class="site-header__menu-content">
                 <div class="site-header__btn-container">
-                    <a href="#" class="btn">Make an oppointment</a>
+                    <a href="#" class="btn open-modal">Book Consultation</a>
                 </div>
                 <nav class="generic-nav generic-nav--right">
                     <ul>
@@ -48,7 +48,7 @@
                 <h1 class="hero-image__title">Keep Healthy</h1>
                 <h2 class="hero-image__subtitle">From now on</h2>
                 <p class="hero-image__description">We provide you traditional and professional Chinese medicine treatment</p>
-                <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+                <p><a href="#" class="btn btn--orange btn--large open-modal">Book Consultation</a></p>
             </div>
         </div>
     </div>
@@ -181,10 +181,39 @@
     <footer class="site-footer">
         <div class="wrapper">
             <span class="site-footer__text">&copy; 2018 Acupuncture Clinic. All Rights Reserved.</span>
-            <a href="#" class="btn">Make an appointment</a>
+            <a href="#" class="btn open-modal">Book Consultation</a>
         </div>
 
     </footer>
+
+    <!--make an appointment modal  -->
+    <div class="modal">
+        <h2 class="section-title section-title--blue">
+            Make An <strong>Appointment</strong>
+            <img class="section-title__icon--right" src="assets/images/icons/calendar.png" alt="calendar"></h2>
+            <div class="wrapper wrapper--narrow generic-content-container">
+                <p>This is the easiest way to book with our practitioners.
+                    Make sure you choose the correct option in order to ensure optimum time and resources are allocated to you.
+                    Or, if you prefer, call <strong>09 580 2379</strong>.</p>
+            </div>
+            <div class="wrapper wrapper--narrow generic-content-container modal__category">
+                <h3 class="modal__category-title">ACC Treatment</h3>
+                <p class=" generic-content-container--no-b-margin">Prior to your appointment with our practitioners you need to already have an ACC claim number for your injury
+                    that is dated less than 52 weeks before your appointment date.</p>
+                <!-- <div class="modal__btn">
+                    <button class="modal__btn--animated"><span>show details</span></button>
+                </div> -->
+            </div>
+            <div class="wrapper wrapper--narrow generic-content-container modal__category modal__category--no-bg">
+                <h3 class="modal__category-title">General Health Consultations</h3>
+                <p class=" generic-content-container--no-b-margin">These consultations are for anyone wanting help with a variety of health issues that are non-ACC or fertility related.
+                    These treatments may involve herbal or nutritional prescription, lifestyle modification and/or acupuncture.</p>
+                <!-- <div class="modal__btn">
+                    <button class="modal__btn--animated"><span>show details</span></button>
+                </div> -->
+            </div>
+            <div class="modal__close">X</div>
+    </div>
 
     </div>
     <script src="compile/scripts/bundle.js"></script>

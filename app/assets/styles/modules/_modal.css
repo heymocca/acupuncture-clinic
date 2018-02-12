@@ -1,0 +1,96 @@
+.modal {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.25);
+    transition: all .3s ease-out;
+
+
+    &__is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    &__category {
+        background-color: rgba($backgroundColor3, .3);
+        border-radius: 4px;
+    }
+
+    &__category--no-bg {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    &__category-title {
+        font-size: 1rem;
+        color: $mainTitle;
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size:2rem;
+        color: $backgroundColor3;
+        transform: scaleX(1.4);
+        transform-origin: 100% 0;
+
+        &:hover {
+            color: $backgroundColor2;
+            cursor: pointer;
+        }
+    }
+
+
+
+/*keep btn and its animation for later use  */
+    &__btn {
+        float: right;
+        margin-bottom: .75rem;
+    }
+
+    &__btn--animated {
+        display: block;
+        border-radius: 4px;
+        background-color: $backgroundColor3;
+        border: none;
+        color: $white;
+        width: 180px;
+        text-align: center;
+        font-size: 1.15rem;
+        padding: .5rem .8rem;
+        cursor: pointer;
+
+        & span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: all .5s;
+        }
+
+        & span:after {
+            content: "\00bb";
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: .5s;
+        }
+
+        &:hover span {
+            padding-right: 20px;
+        }
+
+        &:hover span:after{
+            opacity: 1;
+            right:0;
+        }
+
+    }
+}
