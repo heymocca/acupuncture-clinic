@@ -1227,6 +1227,17 @@ strong {
             font-size: 1rem;
             background-color:transparent
     }
+
+            .generic-nav a.is-shrinked {
+                -webkit-transform: scale(.8);
+                        transform: scale(.8);
+            }
+
+            .generic-nav a.is-active {
+                -webkit-transform: scale(1.2);
+                        transform: scale(1.2);
+                font-weight: 800;
+            }
     }
 
 .display-item {

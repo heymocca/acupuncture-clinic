@@ -26,9 +26,9 @@
                 </div>
                 <nav class="generic-nav generic-nav--right">
                     <ul>
-                        <li><a href="#">ABOUT CLINIC</a></li>
-                        <li><a href="#">OUR SERVICES</a></li>
-                        <li><a href="#">FEEDBACK</a></li>
+                        <li><a href="#aboutClinic" id="about-clinic-link">ABOUT CLINIC</a></li>
+                        <li><a href="#ourServices" id="our-services-link">OUR SERVICES</a></li>
+                        <li><a href="#patientsFeedback" id="patients-feedback-link">FEEDBACK</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,7 +53,7 @@
         </div>
     </div>
     <!-- clinic intro -->
-    <div id="clinicIntro" class="page-section">
+    <div id="aboutClinic" class="page-section" data-link="#about-clinic-link">
         <div class="wrapper">
             <h1 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--b-margin-small">Your first <strong>customized treatment plan</strong> </h1>
             <h2 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--orange clinic-intro--small clinic-intro--narrow clinic-intro--b-margin-large">We&rsquo;ve been working to make your body <strong>better</strong>.</h2>
@@ -91,7 +91,7 @@
         </div>
     </div>
     <!-- services -->
-    <div id="services" class="page-section page-section--blue">
+    <div id="ourServices" class="page-section page-section--blue" data-link="#our-services-link">
         <div class="wrapper">
             <h2 class="section-title">
                 <img class="section-title__icon" src="assets/images/icons/service.png" />
@@ -131,8 +131,8 @@
         </div>
 
     </div>
-    <!-- testimonial -->
-    <div id="feedback" class="page-section page-section--testimonials page-section--no-b-padding-until-medium">
+    <!-- patients feedback -->
+    <div id="patientsFeedback" class="page-section page-section--testimonials page-section--no-b-padding-until-medium" data-link="#patients-feedback-link">
         <div class="wrapper wrapper--no-padding-until-medium">
             <h2 class="section-title section-title--blue">
                 What our <strong>patients say</strong><img class="section-title__icon--right"src="assets/images/icons/comment.png" alt="comment"></h2>

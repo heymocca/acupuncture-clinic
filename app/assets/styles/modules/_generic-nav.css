@@ -41,6 +41,15 @@
             padding: 12px 0;
             font-size: 1rem;
             background-color:transparent;
+
+            &.is-shrinked {
+                transform: scale(.8);
+            }
+
+            &.is-active {
+                transform: scale(1.2);
+                font-weight: 800;
+            }
         }
     }
 }

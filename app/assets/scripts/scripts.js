@@ -5,6 +5,6 @@ import StickyHeader from './modules/StickyHeader';
 
 var mobileMenu = new MobileMenu();
 new PageScroll($('#facilities'), "85%");
-new PageScroll($('#services'), "90%");
-new PageScroll($('#feedback'), "70%");
+new PageScroll($('.services-item'), "90%");
+new PageScroll($('.testimonials'), "70%");
 var stickyHeader = new StickyHeader();
