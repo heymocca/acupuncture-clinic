@@ -7,14 +7,17 @@ var path = require('path');
 module.exports = {
     /*entry for telling webpack which file
     it should begin looking at to create its bundle.*/
-    entry: "./app/assets/scripts/scripts.js",
+    entry: {
+        bundle: "./app/assets/scripts/scripts.js",
+        Vender: "./app/assets/scripts/vendor.js"
+    },
     /*output for telling webpack where the final product
     bundled file should be output to*/
     output: {
         /*the first property is path, which is you want the bundled file to be created
         the second one is the name of the bundled file*/
         path: path.resolve(__dirname, "./app/compile/scripts"),
-        filename: "bundle.js"
+        filename: "[name].js"
     },
     // babel configration
     module: {

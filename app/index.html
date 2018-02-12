@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="compile/styles/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <script src="compile/scripts/vender.js"></script>
     <title>Acupuncture Clinic</title>
 </head>
 
@@ -58,7 +59,7 @@
             <h1 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--b-margin-small">Your first <strong>customized treatment plan</strong> </h1>
             <h2 class="clinic-intro clinic-intro--center clinic-intro--light clinic-intro--orange clinic-intro--small clinic-intro--narrow clinic-intro--b-margin-large">We&rsquo;ve been working to make your body <strong>better</strong>.</h2>
             <div class="wrapper wrapper--medium wrapper--b-margin">
-                <img sizes="(min-width:900px) 976w, 100vw" srcset="assets/images/clinic-intro-small.jpg 565w,
+                <img class="lazyload" sizes="(min-width:900px) 976w, 100vw" data-srcset="assets/images/clinic-intro-small.jpg 565w,
             assets/images/clinic-intro-large.jpg" alt="clinic-intro">
             <!-- (min-width:900px) 976w, 100vw: if the lager than 900, display in 976 wide, otherwise display 100%. "vw" is viewport -->
             </div>
@@ -67,9 +68,9 @@
             <div id="facilities" class=" row row--gutters">
                 <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
                     <picture>
-                        <source size="404" srcset="assets/images/facilities-large.jpg 404w" media="(min-width: 1000px)"/>
-                        <source size="320" srcset="assets/images/facilities-medium.jpg " media="(min-width: 800px)"/>
-                        <img srcset="assets/images/facilities-small.jpg 800w" alt="facilities" />
+                        <source size="404" data-srcset="assets/images/facilities-large.jpg 404w" media="(min-width: 1000px)"/>
+                        <source size="320" data-srcset="assets/images/facilities-medium.jpg " media="(min-width: 800px)"/>
+                        <img class="lazyload" data-srcset="assets/images/facilities-small.jpg 800w" alt="facilities" />
                     </picture>
                     </div>
 
@@ -132,7 +133,7 @@
 
     </div>
     <!-- patients feedback -->
-    <div id="patientsFeedback" class="page-section page-section--testimonials page-section--no-b-padding-until-medium" data-link="#patients-feedback-link">
+    <div id="patientsFeedback" class="page-section page-section--testimonials page-section--no-b-padding-until-medium lazyload" data-link="#patients-feedback-link">
         <div class="wrapper wrapper--no-padding-until-medium">
             <h2 class="section-title section-title--blue">
                 What our <strong>patients say</strong><img class="section-title__icon--right"src="assets/images/icons/comment.png" alt="comment"></h2>
@@ -140,7 +141,7 @@
                 <div class="row__medium-4">
                     <div class="testimonials">
                         <div class="testimonials__photo">
-                            <img src="assets/images/user1.png" alt="">
+                            <img class="lazyload" data-src="assets/images/user1.png" alt="">
                         </div>
                         <h3 class="testimonials__title">Jack Chen</h3>
                         <h4 class="testimonials__subtitle">Engineer</h4>
@@ -152,7 +153,7 @@
                 <div class="row__medium-4">
                     <div class="testimonials">
                         <div class="testimonials__photo">
-                            <img src="assets/images/user3.png" alt="">
+                            <img class="lazyload" data-src="assets/images/user3.png" alt="">
                         </div>
                         <h3 class="testimonials__title">Tina Lao</h3>
                         <h4 class="testimonials__subtitle">Teacher</h4>
@@ -164,7 +165,7 @@
                 <div class="row__medium-4">
                     <div class="testimonials testimonials--last-b-no-margin">
                         <div class="testimonials__photo">
-                            <img src="assets/images/user2.png" alt="">
+                            <img class="lazyload" data-src="assets/images/user2.png" alt="">
                         </div>
                         <h3 class="testimonials__title">Jim Wong</h3>
                         <h4 class="testimonials__subtitle">Student</h4>

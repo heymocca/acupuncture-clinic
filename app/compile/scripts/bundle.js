@@ -11381,6 +11381,8 @@ var StickyHeader = function () {
     function StickyHeader() {
         _classCallCheck(this, StickyHeader);
 
+        this.lazyloadImgages = (0, _jquery2.default)(".lazyload");
+        console.log(this.lazyloadImgages);
         this.siteHeader = (0, _jquery2.default)(".site-header");
         this.headerTriggerElement = (0, _jquery2.default)(".hero-image__title");
         this.createHeaderWaypoints();
@@ -11388,9 +11390,17 @@ var StickyHeader = function () {
         this.headerLink = (0, _jquery2.default)(".generic-nav a");
         this.createLinkWayPoints();
         this.smoothSrolling();
+        this.refreshWaypoints();
     }
 
     _createClass(StickyHeader, [{
+        key: 'refreshWaypoints',
+        value: function refreshWaypoints() {
+            this.lazyloadImgages.load(function () {
+                Waypoint.refreshAll();
+            });
+        }
+    }, {
         key: 'smoothSrolling',
         value: function smoothSrolling() {
             this.headerLink.smoothScroll();
@@ -11425,7 +11435,7 @@ var StickyHeader = function () {
                             (0, _jquery2.default)(anchorLink).addClass("is-active");
                         }
                     },
-                    offset: "65%"
+                    offset: "-15%"
                 });
 
                 new Waypoint({

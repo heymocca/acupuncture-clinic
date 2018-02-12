@@ -4,6 +4,7 @@ import $ from 'jquery';
 import StickyHeader from './modules/StickyHeader';
 import Modal from './modules/Modal';
 
+
 var mobileMenu = new MobileMenu();
 new PageScroll($('#facilities'), "85%");
 new PageScroll($('.services-item'), "90%");
