@@ -6,6 +6,7 @@ var gulp = require( 'gulp' ), // first need to import gulp
 // create a watch task, watch index.html file, then implement html task created before
 gulp.task( 'watch', function() {
 	browserSync.init( {
+		notify: false,
 		// where the browser lives
 		server: {
 			baseDir: "app"
