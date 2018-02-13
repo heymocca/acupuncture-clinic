@@ -9,7 +9,7 @@ module.exports = {
     it should begin looking at to create its bundle.*/
     entry: {
         bundle: "./app/assets/scripts/scripts.js",
-        Vender: "./app/assets/scripts/vendor.js"
+        vendor: "./app/assets/scripts/vendor.js"
     },
     /*output for telling webpack where the final product
     bundled file should be output to*/
