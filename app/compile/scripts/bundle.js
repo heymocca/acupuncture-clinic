@@ -11382,7 +11382,6 @@ var StickyHeader = function () {
         _classCallCheck(this, StickyHeader);
 
         this.lazyloadImgages = (0, _jquery2.default)(".lazyload");
-        console.log(this.lazyloadImgages);
         this.siteHeader = (0, _jquery2.default)(".site-header");
         this.headerTriggerElement = (0, _jquery2.default)(".hero-image__title");
         this.createHeaderWaypoints();
@@ -11396,7 +11395,7 @@ var StickyHeader = function () {
     _createClass(StickyHeader, [{
         key: 'refreshWaypoints',
         value: function refreshWaypoints() {
-            this.lazyloadImgages.load(function () {
+            this.lazyloadImgages.on("load", function () {
                 Waypoint.refreshAll();
             });
         }
