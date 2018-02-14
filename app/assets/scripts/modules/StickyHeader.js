@@ -54,7 +54,7 @@ class StickyHeader {
                         $(anchorLink).addClass("is-active");
                     }
                 },
-                offset: "-15%"
+                offset: "20%"
             });
 
             new Waypoint({
