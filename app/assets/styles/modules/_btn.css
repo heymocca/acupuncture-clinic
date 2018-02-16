@@ -2,19 +2,49 @@
     background-color: $white;
     color: $mainTitle;
     text-decoration: none;
-    padding: .75rem 1rem;
+    padding: .5rem 1rem;
     display: inline-block;
     border-radius: 10px;
+    position: relative;
 
     &--orange {
+        padding: 1rem 1rem;
         background-color: $orange;
         color: $white;
+    }
+
+    &--orange-animation {
+        box-shadow: 0 6px $orangeShadow;
+
+        &:hover {
+            box-shadow: 0 4px $orangeShadow;
+            top: 2px;
+        }
+
+        &:active {
+            box-shadow: none;
+            top: 6px;
+        }
     }
 
     &--large {
 
         @mixin atSmall {
             font-size: 1.6rem;
+        }
+    }
+
+    &--white-animation {
+        box-shadow: 0 4px #f0ebeb;
+
+        &:hover {
+            box-shadow: 0 2px #f0ebeb;
+            top: 2px;
+        }
+
+        &:active {
+            box-shadow: none;
+            top: 6px;
         }
     }
 

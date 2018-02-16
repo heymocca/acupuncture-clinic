@@ -563,16 +563,35 @@ a {
     background-color: #fff;
     color: #0074D9;
     text-decoration: none;
-    padding: .75rem 1rem;
+    padding: .5rem 1rem;
     display: inline-block;
     border-radius: 10px;
+    position: relative;
 
 }
 
 .btn--orange {
+        padding: 1rem 1rem;
         background-color: #ff8000;
         color: #fff;
     }
+
+.btn--orange-animation {
+        -webkit-box-shadow: 0 6px #f6932f;
+                box-shadow: 0 6px #f6932f;
+    }
+
+.btn--orange-animation:hover {
+            -webkit-box-shadow: 0 4px #f6932f;
+                    box-shadow: 0 4px #f6932f;
+            top: 2px;
+        }
+
+.btn--orange-animation:active {
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            top: 6px;
+        }
 
 @media (min-width: 530px) {
 
@@ -580,6 +599,23 @@ a {
             font-size: 1.6rem
     }
     }
+
+.btn--white-animation {
+        -webkit-box-shadow: 0 4px #f0ebeb;
+                box-shadow: 0 4px #f0ebeb;
+    }
+
+.btn--white-animation:hover {
+            -webkit-box-shadow: 0 2px #f0ebeb;
+                    box-shadow: 0 2px #f0ebeb;
+            top: 2px;
+        }
+
+.btn--white-animation:active {
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            top: 6px;
+        }
 
 .wrapper {
     padding-left: 10px;
@@ -987,7 +1023,7 @@ strong {
     position: absolute;
     z-index: 2;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     /*transition property: when this element's background color
     changes, it will gradually transition to the new value over
     a certain period of the time, by default the transition is

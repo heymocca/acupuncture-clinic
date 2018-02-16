@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 2;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     /*transition property: when this element's background color
     changes, it will gradually transition to the new value over
     a certain period of the time, by default the transition is
