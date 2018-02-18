@@ -11,6 +11,7 @@
         padding: 1rem 1rem;
         background-color: $orange;
         color: $white;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
     }
 
     &--orange-animation {
@@ -34,7 +35,7 @@
         }
     }
 
-    &--white-animation {
+    /* &--white-animation {
         box-shadow: 0 4px #f0ebeb;
 
         &:hover {
@@ -46,6 +47,25 @@
             box-shadow: none;
             top: 6px;
         }
-    }
+    } */
 
+    &--orange-animation {
+        animation: jiggle 2s ease-in infinite;
+    }
+}
+
+/*animation  */
+@keyframes jiggle {
+    48%, 62% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    56% {
+        transform: scale(0.9, 1.1) translate(0, -5px);
+    }
+    59% {
+        transform: scale(1, 1) translate(0, -3px);
+    }
 }

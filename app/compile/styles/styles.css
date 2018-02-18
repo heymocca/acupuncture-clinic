@@ -567,13 +567,13 @@ a {
     display: inline-block;
     border-radius: 10px;
     position: relative;
-
 }
 
 .btn--orange {
         padding: 1rem 1rem;
         background-color: #ff8000;
         color: #fff;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
     }
 
 .btn--orange-animation {
@@ -600,22 +600,64 @@ a {
     }
     }
 
-.btn--white-animation {
-        -webkit-box-shadow: 0 4px #f0ebeb;
-                box-shadow: 0 4px #f0ebeb;
-    }
+/* &--white-animation {
+        box-shadow: 0 4px #f0ebeb;
 
-.btn--white-animation:hover {
-            -webkit-box-shadow: 0 2px #f0ebeb;
-                    box-shadow: 0 2px #f0ebeb;
+        &:hover {
+            box-shadow: 0 2px #f0ebeb;
             top: 2px;
         }
 
-.btn--white-animation:active {
-            -webkit-box-shadow: none;
-                    box-shadow: none;
+        &:active {
+            box-shadow: none;
             top: 6px;
         }
+    } */
+
+.btn--orange-animation {
+        -webkit-animation: jiggle 2s ease-in infinite;
+                animation: jiggle 2s ease-in infinite;
+    }
+
+/*animation  */
+
+@-webkit-keyframes jiggle {
+    48%, 62% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+                transform: scale(1.1, 0.9);
+    }
+    56% {
+        -webkit-transform: scale(0.9, 1.1) translate(0, -5px);
+                transform: scale(0.9, 1.1) translate(0, -5px);
+    }
+    59% {
+        -webkit-transform: scale(1, 1) translate(0, -3px);
+                transform: scale(1, 1) translate(0, -3px);
+    }
+}
+
+@keyframes jiggle {
+    48%, 62% {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+                transform: scale(1.1, 0.9);
+    }
+    56% {
+        -webkit-transform: scale(0.9, 1.1) translate(0, -5px);
+                transform: scale(0.9, 1.1) translate(0, -5px);
+    }
+    59% {
+        -webkit-transform: scale(1, 1) translate(0, -3px);
+                transform: scale(1, 1) translate(0, -3px);
+    }
+}
 
 .wrapper {
     padding-left: 10px;
