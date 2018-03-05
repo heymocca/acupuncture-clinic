@@ -1179,6 +1179,7 @@ strong {
         top: 10px;
         right: 10px;
         z-index: 10;
+        cursor: pointer;
     }
 
 .site-header__menu-icon::before {
