@@ -14,7 +14,7 @@ gulp.task('previewDist', function() {
 		server: {
 			baseDir: "docs"
 		}
-	} );
+	});
 });
 
 gulp.task('deleteDistFolder', function() {
@@ -34,7 +34,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function(){
 
 gulp.task('useminTrigger', ['deleteDistFolder'], function() {
     gulp.start('usemin');
-})
+});
 
 // by using 'usemin', you can copy to dist folder, compress file size, and revision
 gulp.task('usemin', ['styles', 'scripts'], function() {
