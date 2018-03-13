@@ -721,7 +721,7 @@ a {
 
 @media (min-width: 800px) {
             .page-section--testimonials.lazyloaded {
-                background: url("/assets/images/testimonial-bg.jpg") top center no-repeat;
+                background: url("../../assets/images/testimonial-bg.jpg") top center no-repeat;
                 background-size: cover;
             }
     }
